@@ -60,12 +60,13 @@ $(document).ready(function(){
         articels.forEach(function(item,index){
     
             if(item.Title.replace(/\s/g,'')===event.target.id){
+                 
+                  $("#text").append("<p>"+item.text+"</p>");
+                 
                   var xhttp = new XMLHttpRequest();
-
-                  xhttp.open("POST","/localhost:8082/Article");
+                  xhttp.open("POST","/localhost:8080/Article");
                   xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-                  xhttp.send(JSON.stringify(item));
-
+                  xhttp.send(JSON.stringify());
             }  
 
         })
