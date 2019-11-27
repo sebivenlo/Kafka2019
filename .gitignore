@@ -12,7 +12,7 @@
 
 .gradle/
 
-/build/
+ArticleBackend/build/
 
 *.class
 
