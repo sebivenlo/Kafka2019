@@ -60,8 +60,12 @@ $(document).ready(function(){
         articels.forEach(function(item,index){
     
             if(item.Title.replace(/\s/g,'')===event.target.id){
-                 
-                  $("#text").append("<p>"+item.text+"</p>");
+                  var xhttp = new XMLHttpRequest();
+
+                  xhttp.open("POST","/subscriptions/add_sources/");
+                  xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+                  xhttp.send(JSON.stringify(item));
+
             }  
 
         })
