@@ -64,7 +64,7 @@ $(document).ready(function(){
                   $("#text").append("<p>"+item.text+"</p>");
                  
                   var xhttp = new XMLHttpRequest();
-                  xhttp.open("POST","/localhost:8080/Article");
+                  xhttp.open("POST","https://localhost:8080/Article");
                   xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
                   xhttp.send(JSON.stringify());
             }  
