@@ -31,10 +31,8 @@ public class KafkaMessage {
 
     @Override
     public String toString() {
-        return "KafkaMessage{" +
-                "name='" + name + '\'' +
+        return "name='" + name + '\'' +
                 ", article='" + article + '\'' +
-                ", action='" + action + '\'' +
-                '}';
+                ", action='" + action + '\'';
     }
 }
