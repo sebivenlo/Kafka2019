@@ -10,9 +10,9 @@
 .idea/
 .vs/
 
-*.gradle/
+.gradle/
 
-*/build
+/build/
 
 ## File-based project format:
 *.ipr
