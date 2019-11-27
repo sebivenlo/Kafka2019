@@ -1,0 +1,49 @@
+
+button{
+float:left;
+border-radius: 50%;
+
+
+
+}
+
+div{
+float: left;
+color: rgb(216, 219, 224);
+padding: 15px;
+background-color:rgb(0, 0, 0);
+border-radius: 25px;
+opacity: 0.60;
+padding: 25px;
+margin: 5px;
+}
+
+p{
+
+color: rgb(216, 219, 224);
+border-style: solid;
+border-color: rgb(10, 8, 4);
+background-color: rgb(10, 8, 4);
+
+border-width: 5px;
+padding: 10px;
+margin: 1px;
+}
+.article1{
+
+    margin: 0 auto;
+    width: 500px;
+
+}
+
+.create{
+
+    color: rgb(216, 219, 224);
+    padding: 15px;
+    background-color:rgb(0, 0, 0);
+    border-radius: 25px;
+    opacity: 0.60;
+    padding: 25px;
+    margin: 5px;
+
+}
