@@ -62,7 +62,7 @@ $(document).ready(function(){
             if(item.Title.replace(/\s/g,'')===event.target.id){
                   var xhttp = new XMLHttpRequest();
 
-                  xhttp.open("POST","/subscriptions/add_sources/");
+                  xhttp.open("POST","/localhost:8082/Article");
                   xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
                   xhttp.send(JSON.stringify(item));
 
