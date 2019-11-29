@@ -1,9 +1,6 @@
 
 
 //var category=["Sport","News","Egonomy","Finincial","Sience","Health"];
-//var articels=[{"category":"Sport","Title":"Ronaldo Sign contract withe Juvantues","text":"dvgdfgfgrfgrgrgrgbrbrgt"},{"category":"Sport","Title":"Barcalona have been beaten among his audience and statuim","text":"dvgdfgfgrfgrgrgrgbrbrgt"},
-//{"category":"Sport","Title":"kaka came back to mailan","text":"kjhkjhkjh"},{"category":"Health","Title":"the human can extend thier life twice","text":"kjhjkhjhl;xx"}]
-
 
 var select=$("#category"); 
 var title=$("#title");
@@ -12,6 +9,8 @@ var article=$("#text");
 
 
 $(document).ready(function(){
+  sessionStorage.setItem("user","bader ammoun");
+  
     
     category.forEach(function(item,index){
           select.append("<p id="+item+">"+item+"</p>");
@@ -57,8 +56,14 @@ $(document).ready(function(){
         $('#text p').slideToggle();
         
         event.target.id;
+        
         articels.forEach(function(item,index){
-    
+            let item2={
+              "user":sessionStorage.getItem('user'),
+              "article":item.title,
+              "action":"read"
+
+            };
             if(item.Title.replace(/\s/g,'')===event.target.id){
                  
                   $("#text").append("<p>"+item.text+"</p>");
@@ -66,7 +71,7 @@ $(document).ready(function(){
                   var xhttp = new XMLHttpRequest();
                   xhttp.open("POST","http://localhost:8080/Article");
                   xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-                  xhttp.send(JSON.stringify(item));
+                  xhttp.send(JSON.stringify(item2));
             }  
 
         })
