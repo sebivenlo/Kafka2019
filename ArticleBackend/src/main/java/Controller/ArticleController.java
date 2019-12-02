@@ -28,6 +28,6 @@ public class ArticleController {
 
   @KafkaListener(topics = "Article")
   public void listen(ConsumerRecord<?, ?> cr) throws Exception {
-    System.out.println(cr.toString());
+    System.out.println(cr.value().toString());
   }
 }
