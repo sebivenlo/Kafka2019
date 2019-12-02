@@ -10,10 +10,9 @@
 .idea/
 .vs/
 
+## Build files
 .gradle/
-
 ArticleBackend/build/
-
 *.class
 
 ## File-based project format:
