@@ -58,18 +58,19 @@ $(document).ready(function(){
         event.target.id;
         
         articels.forEach(function(item,index){
+          
             let item2={
-              "user":sessionStorage.getItem('user'),
-              "article":item.title,
+              "name":sessionStorage.getItem('user'),
+              "article":item.Title,
               "action":"read"
 
             };
             if(item.Title.replace(/\s/g,'')===event.target.id){
                  
                   $("#text").append("<p>"+item.text+"</p>");
-                 
+                  
                   var xhttp = new XMLHttpRequest();
-                  xhttp.open("POST","http://localhost:8080/Article");
+                  xhttp.open("POST","http://localhost:8082/Article");
                   xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
                   xhttp.send(JSON.stringify(item2));
             }  
