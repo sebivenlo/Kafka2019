@@ -1,16 +1,17 @@
 
 
-//var category=["Sport","News","Egonomy","Finincial","Sience","Health"];
+
 
 var select=$("#category"); 
 var title=$("#title");
 var article=$("#text");
-
+// category=sessionStorage.getItem("categories");
 
 
 $(document).ready(function(){
-  sessionStorage.setItem("user","bader ammoun");
-  
+ let articels=JSON.parse(sessionStorage.getItem("articels"));
+ 
+   
     
     category.forEach(function(item,index){
           select.append("<p id="+item+">"+item+"</p>");
@@ -65,6 +66,7 @@ $(document).ready(function(){
               "action":"read"
 
             };
+            
             if(item.Title.replace(/\s/g,'')===event.target.id){
                  
                   $("#text").append("<p>"+item.text+"</p>");
