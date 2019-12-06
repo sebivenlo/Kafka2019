@@ -9,9 +9,9 @@ $('#create').on("click",function(){
 
   };
   let item1={
-    "category":"Sport",
+    "category":$("#category").val(),
     "Title":$("#title").val(),
-    "text":"gfggfgfg"
+    "text":$("#textarea").val(),
 
   }
  let articels=JSON.parse(sessionStorage.getItem("articels"));
