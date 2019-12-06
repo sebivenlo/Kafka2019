@@ -40,7 +40,7 @@ public class SpringKafkaMain {
      * 1. Create a method listen that can listen on the kafka topic: "Article" and output the information to logger.info.
      *
      * The message is built up as follows:
-     * {Ian, Politics, Read}
+     * {Ian, Politics, read}
      * The name is the username of the person browsing the news.
      * The second value represents the article that the user has read/created.
      * The third value is the action that stands for the type of operation the user performed, either a read or write of an article.
@@ -68,7 +68,7 @@ public class SpringKafkaMain {
 
             // Assignment 3
             template.send("NrReads", article + ", 1");
-        } else if (action.equals("Read")) {
+        } else if (action.equals("read")) {
             Integer integer = amountReads.get(article);
             amountReads.put(article, integer + 1);
 
@@ -77,7 +77,7 @@ public class SpringKafkaMain {
         }
 
         // Assignment 4
-        if (action.equals("Write")) {
+        if (action.equals("write")) {
             template.send("NewArticles", article);
         }
     }

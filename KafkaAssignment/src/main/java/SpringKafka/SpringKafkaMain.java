@@ -33,7 +33,7 @@ public class SpringKafkaMain {
    * 1. Create a method listen that can listen on the kafka topic: "Article" and output the information to logger.info.
    *
    * The message is built up as follows:
-   * {Ian, Politics, Read}
+   * {Ian, Politics, read}
    * The name is the username of the person browsing the news.
    * The second value represents the article that the user has read/created.
    * The third value is the action that stands for the type of operation the user performed, either a read or write of an article.
@@ -44,7 +44,7 @@ public class SpringKafkaMain {
    * different kafka topic called: "NrReads" using the kafka template.
    * Try it out using a listener on the "NrReads" topic.
    *
-   * 4. Also whenever a write action is performed post the article name to a topic: "NewArticles".
+   * 4. Also whenever a write action is performed publish the article to a topic: "NewArticles".
    */
 }
 
