@@ -26,7 +26,7 @@ public class ApacheKafkaMain {
      * keep reading new incoming messages.
      *
      * The message is built up as follows:
-     * {name='Ian', article='Politics', action='Read'}
+     * {name='Ian', article='Politics', action='read'}
      * The name is the username of the person browsing the news.
      * The article represents the article that the user has read/created.
      * The action stands for the type of operation the user performed, either a read or write of an article.

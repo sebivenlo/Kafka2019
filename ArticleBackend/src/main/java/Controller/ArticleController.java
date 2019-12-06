@@ -11,23 +11,23 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class ArticleController {
-  private KafkaTemplate<String, String> kafkaTemplate;
+    private KafkaTemplate<String, String> kafkaTemplate;
 
-  private final String topic = "Article";
+    private final String topic = "Article";
 
-  @Autowired
-  public ArticleController(KafkaTemplate<String, String> kafkaTemplate) {
-    this.kafkaTemplate = kafkaTemplate;
-  }
+    @Autowired
+    public ArticleController(KafkaTemplate<String, String> kafkaTemplate) {
+        this.kafkaTemplate = kafkaTemplate;
+    }
 
-  @CrossOrigin
-  @PostMapping(value = "/Article")
-  public void postArticle(@RequestBody KafkaMessage kafkaMessage) {
-    kafkaTemplate.send(topic, kafkaMessage.toString());
-  }
+    @CrossOrigin
+    @PostMapping(value = "/Article")
+    public void postArticle(@RequestBody KafkaMessage kafkaMessage) {
+        kafkaTemplate.send(topic, kafkaMessage.toString());
+    }
 
-  @KafkaListener(topics = "Article")
-  public void listen(ConsumerRecord<?, ?> cr) throws Exception {
-    System.out.println(cr.value().toString());
-  }
+    @KafkaListener(topics = "Article")
+    public void listen(ConsumerRecord<?, ?> cr) throws Exception {
+        System.out.println(cr.value().toString());
+    }
 }
