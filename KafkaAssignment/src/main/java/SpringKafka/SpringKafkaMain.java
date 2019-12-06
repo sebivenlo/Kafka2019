@@ -14,6 +14,10 @@ public class SpringKafkaMain {
    */
   private static Logger logger = LoggerFactory.getLogger(SpringKafkaMain.class);
 
+  /**
+   * Autowired constructor that takes the template as a parameter and instantiates it from the template bean in the Producer Config
+   * @param template The kafka template to use
+   */
   @Autowired
   public SpringKafkaMain(KafkaTemplate<String, String> template) {
     this.template = template;

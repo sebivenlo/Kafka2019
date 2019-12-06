@@ -1,5 +1,6 @@
 # Kafka2019
 Kafka workshop 2019 repository
+Workshop by Bader Ammoun and Ian Sultanis
 
 # Required programs for the workshop
 1. First of all make sure to have docker and docker-compose installed.

@@ -21,6 +21,10 @@ public class SpringKafkaMain {
 
     private Map<String, Integer> amountReads = new HashMap<>();
 
+    /**
+     * Autowired constructor that takes the template as a parameter and instantiates it from the template bean in the Producer Config
+     * @param template The kafka template to use
+     */
     @Autowired
     public SpringKafkaMain(KafkaTemplate<String, String> template) {
         this.template = template;

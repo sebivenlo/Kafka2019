@@ -38,7 +38,7 @@ public class KafkaProducerConfig {
     }
 
     /**
-     * Bean that exposed the KafkaTemplate for use in the main class
+     * Bean that exposes the KafkaTemplate for use in the main class
      *
      * @return A new KafkaTemplate with required properties to connect with Kafka
      */

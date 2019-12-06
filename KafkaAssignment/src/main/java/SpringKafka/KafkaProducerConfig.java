@@ -17,7 +17,7 @@ public class KafkaProducerConfig {
     /**
      * TODO Assignment 1: Add the configuration
      *
-     * Method that can produce the factory that can create Kafka templates
+     * Method that can produce the factory that is used to create Kafka templates
      * @return a DefaultKafkaProducerFactory with correct properties
      */
     @Bean
@@ -33,7 +33,8 @@ public class KafkaProducerConfig {
     }
 
     /**
-     * Bean that exposed the KafkaTemplate for use in the main class
+     * Bean that exposes the KafkaTemplate for use in the main class
+     *
      * @return A new KafkaTemplate with required properties to connect with Kafka
      */
     @Bean
